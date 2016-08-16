@@ -1,0 +1,38 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+<title>留言簿</title>
+</head>
+
+<body>
+<div class='page-header'>
+<h2>留言簿</h2>
+</div>
+
+<div class='page-form'>
+    <p>请尽情留言吧!</p>
+    <form method="POST">
+	{{ form.hidden_tag() }}
+	<p>{{ form.name.label }} {{ form.name() }}</p>
+        <p>{{ form.text.label }} {{ form.text() }}</p>
+	<p>{{ form.submit() }}</p>
+    </form>
+</div>
+<div>
+{% if messages %}
+    <p>历史留言信息</p>
+    <ul>
+    {% for message in messages %}
+    <b>{{ message.author }}</b>  留言于：({{ message.create_time }})
+    <p>{{ message.text }}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>没有留言</p>
+{% endif %}
+</div>
+<div class='page-bottom'>
+</div>
+</body>
+</html>

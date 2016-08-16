@@ -1,0 +1,17 @@
+.page-header {
+	background-color: #009999;
+	margin-top: 0;
+        padding: 20px 20px 20px 40px;
+    }
+
+.page-form {
+	 background-color: #66CCCC;
+	 margin-top: 0;
+	 padding: 20px 20px 20px 40px;
+    }
+
+.page-bottom {
+        background-color: #009999;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+}
